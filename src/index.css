@@ -29,6 +29,10 @@ p {
   @apply mb-4 leading-relaxed;
 }
 
+a {
+  @apply text-primary hover:underline underline-offset-2 decoration-2;
+}
+
 h2,
 h3,
 h4,
