@@ -63,6 +63,11 @@ ol {
   @apply mb-4 list-decimal list-inside pl-4;
 }
 
+ul li,
+ol li {
+  @apply mb-2;
+}
+
 blockquote {
   @apply border-l-4 border-alt pl-4 py-2 italic mb-4;
 }
@@ -77,4 +82,16 @@ blockquote p {
 
 blockquote p:last-child {
   @apply mb-0;
+}
+
+figure {
+  @apply lg:w-2/3 mx-auto my-12;
+}
+
+figure img {
+  @apply w-full;
+}
+
+figure figcaption {
+  @apply italic text-sm mt-2;
 }
