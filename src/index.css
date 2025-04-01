@@ -1,8 +1,26 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Arizona Flare";
+  src: url("./fonts/ABCArizonaFlare-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Mallory";
+  src: url("./fonts/Mallory-Book.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Martina Plantijn";
+  src: url("./fonts/martina-plantijn-regular.woff2") format("woff2");
+}
+
 @theme {
   --color-cream: #fefcf2;
   --color-textcolor: #544c43;
   --color-primary: #8ea75f;
   --color-alt: #ffb097;
+  --font-title: "Mallory", sans-serif;
+  --font-body: "Martina Plantijn", serif;
+  --font-flare: "Arizona Flare", serif;
 }
