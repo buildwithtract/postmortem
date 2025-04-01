@@ -44,7 +44,7 @@
             margin-left: 4px;
             font-size: 12px;
             color: #8ea75f;
-            display: none;
+            display: inline-block;
         }
         .reference {
             color: #8ea75f;
@@ -60,9 +60,17 @@
             font-weight: bold;
             color: #8ea75f;
         }
-        @media (min-width: 1024px) {
-            .comment-indicator {
-                display: block;
+        @media (max-width: 1023px) {
+            /* Mobile comment display */
+            .mobile-comments {
+                margin-top: 2rem;
+                border-top: 1px solid rgba(84, 76, 67, 0.2);
+                padding-top: 2rem;
+            }
+            .mobile-comments h3 {
+                margin-bottom: 1rem;
+                font-weight: 700;
+                font-size: 1.25rem;
             }
         }
         .comment-tooltip {
@@ -288,6 +296,136 @@
                             </li>
                         </ul>
                     </section>
+                    
+                    <!-- Mobile comments section (only visible on small screens) -->
+                    <div class="mobile-comments block lg:hidden">
+                        <h3>Comments</h3>
+                        <div class="space-y-6">
+                            <!-- Comment 1 -->
+                            <div id="mobile-comment1" class="comment-jamie bg-white p-4 rounded-lg shadow-sm">
+                                <div class="mb-2 flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">J</div>
+                                    <p class="ml-2 font-medium">Jamie</p>
+                                </div>
+                                <p class="text-sm mb-1">
+                                    <span class="font-medium text-primary">On "mission of revolutionizing data pipelines for startups":</span> 
+                                </p>
+                                <p class="text-sm">
+                                    Our original mission statement was much broader. We should have narrowed our focus from day one.
+                                </p>
+                                
+                                <div class="reply mt-3 pt-3 border-t border-textcolor/10">
+                                    <div class="mb-2 flex items-center">
+                                        <div class="w-7 h-7 bg-alt rounded-full flex items-center justify-center text-white">H</div>
+                                        <p class="ml-2 font-medium text-sm">Henry</p>
+                                    </div>
+                                    <p class="text-sm">
+                                        Agreed. The "for startups" part came later, after we realized our enterprise pitch wasn't landing.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 2 -->
+                            <div id="mobile-comment2" class="comment-henry bg-white p-4 rounded-lg shadow-sm">
+                                <div class="mb-2 flex items-center">
+                                    <div class="w-8 h-8 bg-alt rounded-full flex items-center justify-center text-white">H</div>
+                                    <p class="ml-2 font-medium">Henry</p>
+                                </div>
+                                <p class="text-sm mb-1">
+                                    <span class="font-medium text-alt">On "building better data infrastructure for growing companies":</span> 
+                                </p>
+                                <p class="text-sm">
+                                    I still believe there's a huge opportunity here, but our approach was too unfocused.
+                                </p>
+                            </div>
+                            
+                            <!-- Comment 3 -->
+                            <div id="mobile-comment3" class="comment-jamie bg-white p-4 rounded-lg shadow-sm">
+                                <div class="mb-2 flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">J</div>
+                                    <p class="ml-2 font-medium">Jamie</p>
+                                </div>
+                                <p class="text-sm mb-1">
+                                    <span class="font-medium text-primary">On "exhausting our options for additional funding":</span> 
+                                </p>
+                                <p class="text-sm">
+                                    We should have cut costs earlier and extended our runway by at least 6 months.
+                                </p>
+                                
+                                <div class="reply mt-3 pt-3 border-t border-textcolor/10">
+                                    <div class="mb-2 flex items-center">
+                                        <div class="w-7 h-7 bg-alt rounded-full flex items-center justify-center text-white">H</div>
+                                        <p class="ml-2 font-medium text-sm">Henry</p>
+                                    </div>
+                                    <p class="text-sm">
+                                        The marketing spend in Q4 2024 was probably a mistake given our runway situation.
+                                    </p>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 4 -->
+                            <div id="mobile-comment4" class="comment-henry bg-white p-4 rounded-lg shadow-sm">
+                                <div class="mb-2 flex items-center">
+                                    <div class="w-8 h-8 bg-alt rounded-full flex items-center justify-center text-white">H</div>
+                                    <p class="ml-2 font-medium">Henry</p>
+                                </div>
+                                <p class="text-sm mb-1">
+                                    <span class="font-medium text-alt">On "compelling value proposition that would drive continuous growth":</span> 
+                                </p>
+                                <p class="text-sm">
+                                    Our core problem was splitting focus between two different user personas. We should have picked one.
+                                </p>
+                            </div>
+                            
+                            <!-- Comment 5 -->
+                            <div id="mobile-comment5" class="comment-jamie bg-white p-4 rounded-lg shadow-sm">
+                                <div class="mb-2 flex items-center">
+                                    <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white">J</div>
+                                    <p class="ml-2 font-medium">Jamie</p>
+                                </div>
+                                <p class="text-sm mb-1">
+                                    <span class="font-medium text-primary">On "narrow customer segment where you can deliver overwhelming value":</span> 
+                                </p>
+                                <p class="text-sm">
+                                    Looking back, I think we should have focused on enterprise customers from the beginning. The sales cycles were longer, but the contracts were more stable.
+                                </p>
+                                
+                                <div class="reply mt-3 pt-3 border-t border-textcolor/10">
+                                    <div class="mb-2 flex items-center">
+                                        <div class="w-7 h-7 bg-alt rounded-full flex items-center justify-center text-white">H</div>
+                                        <p class="ml-2 font-medium text-sm">Henry</p>
+                                    </div>
+                                    <p class="text-sm">
+                                        I was initially resistant to the enterprise focus, but you were right. The smaller customers needed too much handholding.
+                                    </p>
+                                    
+                                    <div class="reply mt-3 pt-3 border-t border-textcolor/10">
+                                        <div class="mb-2 flex items-center">
+                                            <div class="w-7 h-7 bg-primary rounded-full flex items-center justify-center text-white">J</div>
+                                            <p class="ml-2 font-medium text-sm">Jamie</p>
+                                        </div>
+                                        <p class="text-sm">
+                                            The support burden alone was killing us. Remember those late night calls with the Hawaii team?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Comment 6 -->
+                            <div id="mobile-comment6" class="comment-henry bg-white p-4 rounded-lg shadow-sm">
+                                <div class="mb-2 flex items-center">
+                                    <div class="w-8 h-8 bg-alt rounded-full flex items-center justify-center text-white">H</div>
+                                    <p class="ml-2 font-medium">Henry</p>
+                                </div>
+                                <p class="text-sm mb-1">
+                                    <span class="font-medium text-alt">On "core indicators of product-market fit":</span> 
+                                </p>
+                                <p class="text-sm">
+                                    The technical architecture decisions we made early on proved difficult to scale when we pivoted. Next time, I'd invest more in flexible infrastructure.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                     
                     <footer class="mt-16 pt-8 border-t border-textcolor/20 text-center">
                         <p class="text-sm text-textcolor/70">© 2025 — Jamie Rumbelow & Henry Williams</p>
@@ -536,13 +674,28 @@
             // Prevent default link behavior so clicking just scrolls to comment
             annotation.addEventListener('click', function(e) {
                 e.preventDefault();
-                const targetElement = document.getElementById(commentId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                    targetElement.classList.add('bg-alt/10');
-                    setTimeout(() => {
-                        targetElement.classList.remove('bg-alt/10');
-                    }, 1500);
+                
+                // For mobile, we need to scroll to the mobile version of the comment
+                if (window.innerWidth < 1024) {
+                    const mobileTargetId = 'mobile-' + commentId;
+                    const mobileElement = document.getElementById(mobileTargetId);
+                    if (mobileElement) {
+                        mobileElement.scrollIntoView({ behavior: 'smooth' });
+                        mobileElement.classList.add('bg-alt/10');
+                        setTimeout(() => {
+                            mobileElement.classList.remove('bg-alt/10');
+                        }, 1500);
+                    }
+                } else {
+                    // Desktop behavior - scroll to the sidebar comment
+                    const targetElement = document.getElementById(commentId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({ behavior: 'smooth' });
+                        targetElement.classList.add('bg-alt/10');
+                        setTimeout(() => {
+                            targetElement.classList.remove('bg-alt/10');
+                        }, 1500);
+                    }
                 }
             });
         });
