@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tract Postmortem</title>
     <link rel="stylesheet" href="./index.css" />
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll("a").forEach((link) => {
+          link.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = link.getAttribute("href");
+            const targetElement = document.querySelector(target);
+            targetElement.scrollIntoView({ behavior: "smooth" });
+            window.history.pushState({}, "", target);
+          });
+        });
+      });
+    </script>
   </head>
   <body class="bg-cream text-textcolor font-body">
     <div class="container mx-auto py-20 px-4">
@@ -13,7 +26,9 @@
         <main class="document w-full lg:w-2/3 bg-white shadow-lg p-8 lg:p-12">
           <header class="flex justify-between text-primary items-center mb-12">
             <div class="w-1/3">
-              <h1 class="text-sm tracking-wider uppercase font-title font-bold">
+              <h1
+                class="text-sm tracking-widest uppercase font-title font-bold"
+              >
                 A Postmortem
               </h1>
             </div>
@@ -22,14 +37,16 @@
               <img src="./tract.svg" alt="Tract" class="w-full" />
             </div>
             <div class="w-1/3 text-right">
-              <h1 class="text-sm tracking-wider uppercase font-title font-bold">
+              <h1
+                class="text-sm tracking-widest uppercase font-title font-bold"
+              >
                 Of A Startup
               </h1>
             </div>
           </header>
 
           <article>
-            <h2>Introduction</h2>
+            <h2 id="introduction">Introduction</h2>
             <p>
               Between May 2023 and March 2025, Tract attempted to build a
               venture-backed company to address Britain’s housing crisis by
@@ -83,7 +100,7 @@
               importantly, we’re extremely grateful to everyone who supported us
               over the last couple of years, in money and in time.
             </p>
-            <p class="text-sm italic text-right">
+            <p class="text-sm italic text-right !mb-16 !mt-8">
               <a href="https://jamierumbelow.net" target="_blank"
                 >Jamie Rumbelow</a
               >
@@ -92,6 +109,144 @@
                 >Henry Dashwood</a
               ><br />
               March 2025, London
+            </p>
+
+            <h3 id="overview">Overview</h3>
+            <p>
+              This document is long; this section is a bullet point summary. The
+              <a href="#advice-for-founders">Advice for Founders</a> section
+              contains the main lessons we hope people take from our experience,
+              so feel free to only read that.
+            </p>
+
+            <h4>
+              Introduction
+              <a href="#introduction" class="text-xs">jump to</a>
+            </h4>
+            <ul>
+              <li>
+                In May 2023, Tract was founded to build software to fix
+                Britain’s housing crisis.
+              </li>
+              <li>We raised a £744,000 pre-seed round in April 2024.</li>
+              <li>
+                We decided to wrap up operations and return capital to investors
+                in March 2025.
+              </li>
+            </ul>
+            <h4>
+              Mission and worldview
+              <a href="#mission-and-worldview" class="text-xs">jump to</a>
+            </h4>
+            <ul>
+              <li>
+                Housing in Britain is expensive because getting planning
+                permission is difficult.
+              </li>
+              <li>
+                Granting permission takes the median hectare of land from
+                £20,000 to £2.4 million - a 139x uplift.
+              </li>
+              <li>
+                If we can reduce the costs and uncertainty of this process by
+                any reasonable amount, we can build a business and help solve
+                the housing crisis.
+              </li>
+            </ul>
+            <h4>
+              Reflections
+              <a href="#reflections" class="text-xs">jump to</a>
+            </h4>
+
+            <p>
+              Things we did well:
+              <a href="#things-we-did-well" class="text-xs uppercase font-title"
+                >jump to</a
+              >
+            </p>
+            <ul>
+              <li>
+                Raised capital for an unusual business in a difficult market.
+              </li>
+              <li>Built good technology and solid products.</li>
+              <li>
+                Pivoted quickly in December when we realised our strategy wasn’t
+                working.
+              </li>
+              <li>Learned a lot about a complex industry quickly.</li>
+            </ul>
+
+            <p>
+              Reasonable errors:
+              <a href="#reasonable-errors" class="text-xs uppercase font-title"
+                >jump to</a
+              >
+            </p>
+            <ul>
+              <li>Overestimated British market size and receptiveness.</li>
+              <li>
+                Raised venture capital for a model that probably should have
+                been funded differently.
+              </li>
+              <li>
+                Focussed too much on technology over business development.
+              </li>
+              <li>Built out the team too early.</li>
+              <li>Didn’t consult land agents early enough.</li>
+              <li>Failed to capitalise on Scout’s success.</li>
+              <li>Spend lots of time and money on non-essentials.</li>
+              <li>Didn’t focus on getting to revenue.</li>
+            </ul>
+            <p>
+              Advice for founders:
+              <a
+                href="#advice-for-founders"
+                class="text-xs uppercase font-title"
+                >jump to</a
+              >
+            </p>
+            <ul>
+              <li>
+                Get to the US - larger, higher-quality market, better ecosystem
+                for building companies.
+              </li>
+              <li>
+                Focus on market quality - receptive customers, clear
+                decision-makers, fast learning cycles.
+              </li>
+              <li>Stay lean until you have proven revenue.</li>
+              <li>Be aggressively commercial from day one.</li>
+              <li>Test hypotheses quickly and thoroughly.</li>
+              <li>
+                Always ask yourself, “what have I learned from customers?”
+              </li>
+            </ul>
+            <h4>
+              Appendices
+              <a href="#appendices" class="text-xs">jump to</a>
+            </h4>
+            <ul>
+              <li>Further reading</li>
+              <li>Things that should exist</li>
+              <li>Things that already exist</li>
+            </ul>
+
+            <h2 id="the-mission">The Mission</h2>
+            <p>
+              This is a timeline of the events that happened during the time we
+              were building Tract.
+            </p>
+
+            <h2 id="timeline">Timeline</h2>
+            <p>
+              This is a timeline of the events that happened during the time we
+              were building Tract.
+            </p>
+
+            <h2 id="advice-for-founders">Advice for Founders</h2>
+            <p>
+              This is the main section of the document. It contains the main
+              lessons we hope people take from our experience.
             </p>
           </article>
         </main>

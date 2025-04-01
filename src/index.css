@@ -33,11 +33,13 @@ a {
   @apply text-primary hover:underline underline-offset-2 decoration-2;
 }
 
+a[href^="#"]::before {
+  @apply content-['#'] text-primary text-xs font-bold mx-1;
+}
+
 h2,
 h3,
-h4,
-h5,
-h6 {
+h4 {
   @apply font-flare mt-8 mb-4;
 }
 
@@ -50,17 +52,13 @@ h3 {
 }
 
 h4 {
-  @apply text-lg;
-}
-
-h5 {
-  @apply text-base font-bold;
+  @apply font-title uppercase text-sm font-bold;
 }
 
 ul {
-  @apply mb-4 list-disc list-inside;
+  @apply mb-4 list-disc list-inside pl-4;
 }
 
 ol {
-  @apply mb-4 list-decimal list-inside;
+  @apply mb-4 list-decimal list-inside pl-4;
 }
