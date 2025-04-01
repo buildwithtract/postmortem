@@ -40,7 +40,7 @@ a[href^="#"]::before {
 h2,
 h3,
 h4 {
-  @apply font-flare mt-8 mb-4;
+  @apply font-flare mt-12 mb-4;
 }
 
 h2 {
@@ -61,4 +61,16 @@ ul {
 
 ol {
   @apply mb-4 list-decimal list-inside pl-4;
+}
+
+blockquote {
+  @apply border-l-4 border-alt pl-4 py-2 italic mb-4;
+}
+
+blockquote p {
+  @apply mb-2 text-sm;
+}
+
+blockquote p:last-child {
+  @apply mb-0;
 }
