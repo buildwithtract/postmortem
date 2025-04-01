@@ -21,22 +21,26 @@
   </head>
   <body class="bg-cream text-textcolor font-body">
     <div class="container mx-auto py-20 px-4">
-      <div class="flex flex-col lg:flex-row gap-8">
+      <div class="flex flex-col lg:flex-row justify-center gap-8">
         <!-- Main content -->
-        <main class="document w-full lg:w-2/3 bg-white shadow-lg p-8 lg:p-12">
-          <header class="flex justify-between text-primary items-center mb-12">
-            <div class="w-1/3">
+        <main
+          class="document w-full max-w-[832px] bg-white shadow-lg p-8 py-12 lg:p-12"
+        >
+          <header
+            class="flex justify-between text-primary sm:items-center items-start gap-4 sm:gap-0 mb-20 sm:mb-12 flex-col-reverse sm:flex-row"
+          >
+            <div class="sm:w-1/3">
               <h1
                 class="text-sm tracking-widest uppercase font-title font-bold"
               >
-                A Postmortem
+                A Postmortem <span class="sm:hidden">Of A Startup</span>
               </h1>
             </div>
-            <div class="flex flex-col gap-4 lg:w-1/8 items-center mx-auto">
+            <div class="flex-col gap-4 lg:w-1/8 items-center sm:mx-auto flex">
               <img src="./badge.svg" alt="Badge" class="w-6" />
               <img src="./tract.svg" alt="Tract" class="w-full" />
             </div>
-            <div class="w-1/3 text-right">
+            <div class="w-1/3 text-right hidden sm:block">
               <h1
                 class="text-sm tracking-widest uppercase font-title font-bold"
               >
@@ -111,12 +115,13 @@
               March 2025, London
             </p>
 
-            <h3 id="overview">Overview</h3>
+            <h3 id="table-of-contents">Table of Contents</h3>
             <p>
-              This document is long; this section is a bullet point summary. The
+              This document is long; this table of contents also functions as a
+              bullet-point summary. The
               <a href="#advice-for-founders">Advice for Founders</a> section
               contains the main lessons we hope people take from our experience,
-              so feel free to only read that.
+              so feel free to only read that and skip the rest.
             </p>
 
             <h4>
@@ -415,6 +420,44 @@
               venture-scale business model.
             </p>
 
+            <h3 id="timeline-nov-2023-jan-2024">
+              November 2023 - January 2024
+            </h3>
+            <p>
+              With the white-labelled version of Attract online, we entered a
+              period of exploration and uncertainty. We had a call with a major
+              surveyor where we showed them a mocked-up tool for writing a
+              planning application using an LLM and the information about a site
+              in our database. But after the demo, we were ghosted.
+            </p>
+            <p>
+              Market concerns loomed large. The pricing dynamics made us
+              question our ability to raise capital with our current approach.
+              In retrospect, we may have been closer to viable products than we
+              realised. Multiple British prop-tech companies have been funded,
+              including in the US, during the lifetime, suggesting alternative
+              paths we could have taken.
+            </p>
+            <p>
+              Despite challenges, we continued experimenting. In December, we
+              created a ‘Tinder for Buildings’ demo with inpainting models that
+              received positive feedback. We continued scoping ways to build a
+              business on our planning data work. We were awarded an Emergent
+              Ventures grant, validating our mission if not our approach.
+            </p>
+
+            <blockquote class="comment">
+              <p>
+                <strong>JR:</strong> At this stage, we were clearly concerned
+                about the market, but I don’t think we did enough – now or
+                indeed later – to precisify those concerns. We gave up on the
+                platform idea because of a couple of crappy meetings, rather
+                than work out how to pitch better. It feels like we weren’t
+                trying hard enough to be an organisation that learned from its
+                mistakes.
+              </p>
+            </blockquote>
+
             <h2 id="advice-for-founders">Advice for Founders</h2>
             <p>
               This is the main section of the document. It contains the main
@@ -422,11 +465,6 @@
             </p>
           </article>
         </main>
-
-        <!-- Right sidebar (visible on desktop only) -->
-        <aside
-          class="sidebar-right hidden lg:block lg:w-1/3 sticky top-10 self-start"
-        ></aside>
       </div>
     </div>
   </body>
