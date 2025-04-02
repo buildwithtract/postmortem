@@ -95,3 +95,43 @@ figure img {
 figure figcaption {
   @apply italic text-sm mt-2;
 }
+
+table {
+  @apply w-full border-collapse border border-textcolor;
+}
+
+table tr {
+  @apply border-b border-textcolor;
+}
+
+table tr:last-child {
+  @apply border-b-0;
+}
+
+table thead tr:last-child {
+  @apply border-b border-textcolor;
+}
+
+table td,
+table th {
+  @apply p-2 text-sm border-r border-textcolor;
+}
+
+table th p,
+table td p {
+  @apply m-0;
+}
+
+table th {
+  @apply font-title uppercase;
+}
+
+table td:last-child,
+table th:last-child {
+  @apply border-r-0;
+}
+
+table td:first-child,
+table th:first-child {
+  @apply border-l-0;
+}
