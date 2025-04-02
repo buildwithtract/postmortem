@@ -1090,6 +1090,182 @@
               access provided genuine value.
             </p>
 
+            <h3 id="timeline-tract-editor-december-2024-march-2025">
+              Tract Editor (December 2024 - March 2025)
+            </h3>
+
+            <p>
+              During the same tech sprint that produced Scout, we started
+              considering reviving the planning applications platform.
+            </p>
+
+            <p>
+              We had all this information in our database – most required for
+              the desk reports for planning applications – but were only using
+              it for appraisals. To drive down the cost of planning
+              applications, we needed to automate as much of the process as
+              possible, including writing these reports.
+            </p>
+
+            <p>
+              Since we abandoned the idea of doing property development
+              ourselves, we considered selling the tool directly. Many US
+              startups help draft documents in development and construction, so
+              there was some precedent.
+            </p>
+
+            <p>
+              A demo came together quickly. We dumped our appraisal output into
+              a JSON blob. We parsed policies from an LPA's local plan. We built
+              a document editor using open source components. We chained LLM
+              prompts with our planning information – and got good results. A
+              vision for this product began to form. We'd sell an LLM wrapper to
+              planning consultants and developers to speed up document drafting.
+              Then we'd expand to become the platform for managing all their
+              projects, each with dozens of documents - hundreds with revisions.
+              Hundreds of thousands of planning applications are submitted
+              yearly, but no tool captures the institutional knowledge that
+              compounds from project to project.
+            </p>
+
+            <p>
+              This felt promising. It played to our strengths as software
+              developers. There was a sales playbook we could follow and our
+              investors would understand for the next round. Preliminary
+              discussions suggested the market was more open to our product:
+              even planners realised they needed an answer to the AI question.
+            </p>
+
+            <p>
+              There was also a path to apply our technology to the US market,
+              particularly California, which has its own housing crisis and
+              legal hurdles.
+            </p>
+
+            <p>
+              We could build tools to help people navigate applications like lot
+              subdivisions or rezoning petitions, or a tool for searching trial
+              court rulings. Developers sometimes sue the city council, and
+              these rulings don’t automatically become planning policy like
+              Planning Inspectorate rulings in England, but they’re useful.
+              Developers pay land use attorneys a lot of money to research them.
+              Or we could help multijurisdictional landlords keep up with
+              different regulations.
+            </p>
+
+            <p>
+              The common thread was our ability to ingest large numbers of
+              documents, map their content onto a geospatial layer, and ask
+              meaningful questions. Our technical foundation could support
+              multiple business models in the UK and US.
+            </p>
+
+            <p>
+              Expanding internationally would require significant resources and
+              market knowledge. We decided to focus on validating our core
+              product with UK customers before pursuing US opportunities.
+            </p>
+
+            <blockquote class="comment">
+              <p>
+                <strong>JR:</strong> This might have been another fatal error.
+                Going straight after the US market and competing directly with
+                SchemeFlow and friends would at least have cauterised the market
+                sizing worries that eventually killed us. I have a sense that US
+                construction (broadly understood) is a faster market, too, so we
+                might have addressed some of the market quality issues too.
+              </p>
+            </blockquote>
+
+            <h4>Setting up design partnerships</h4>
+
+            <p>
+              Towards the end of 2024, we set up calls with several planning
+              consultants. We asked about their workflows and what tools. We
+              described our vision and showed them our demo. The responses were
+              all positive.
+            </p>
+
+            <h4>Narrowing focus to pre-app letters</h4>
+
+            <p>
+              <a
+                href="https://drive.google.com/drive/folders/1KP9sJ8Rk2DLHHQFnz97o45WkbVQEd4pN"
+                target="_blank"
+                >View some videos of Tract Editor in action</a
+              >
+            </p>
+
+            <p>
+              After a month of calls and building, we realised our product was
+              too general-purpose. We needed to focus on a specific problem. We
+              had little evidence of selling this software and wanted a clear
+              use-case to ground our offering.
+            </p>
+
+            <p>
+              We focused on pre-app statements. Most local authorities ask major
+              developments to get pre-application advice: feedback on an initial
+              proposal before submission, to ensure the basics are solid. It was
+              the simplest document we saw. Most applications go through pre-app
+              first – about 80%, according to one customer – it’s usually step
+              one. We knew the costs and timelines, so we could anchor the
+              pricing. And we had most of the information to generate them.
+            </p>
+
+            <p>
+              This led to a product called Tract Editor. Users would draw their
+              site boundaries on a map, and we would pull existing site
+              information. We could generate and reuse our appraisal output, so
+              this was easy. We could pass this information into an LLM to
+              produce a first-draft pre-app statement.
+            </p>
+
+            <p>
+              We’d add normal document editor features – comments, versioning,
+              WYSIWYG, etc. – to integrate it into their workflow and avoid
+              needing a perfect first draft. It could get you a reasonable
+              starting point, like a junior planning consultant, which you could
+              refine in a familiar environment.
+            </p>
+
+            <p>
+              We built a good tool that produced compelling first drafts from
+              minimal information. It had a smart Q&A UI allowing the model to
+              ask the user questions and regenerate sections based on the
+              answers. It treated the planning system as a first-class citizen
+              of the document editor, rather than focusing on the AI. It cited
+              its sources and provided references for the quoted planning
+              policy.
+            </p>
+
+            <p>
+              Our design partners seemed happy. We had made a marketing website
+              and received good feedback from industry people. We chose a price
+              of £99/user/month. We were ready to start selling.
+            </p>
+
+            <h4 id="timeline-tract-editor-december-2024-march-2025-learnings">
+              Learnings
+            </h4>
+
+            <p>
+              By this stage, we knew to talk to customers before, during, and
+              after building a demo, and we didn’t spend too much time coding
+              before getting positive feedback. What we did wrong was assume
+              ‘positive feedback’ meant ‘desire to purchase’.
+            </p>
+
+            <p>
+              <strong
+                >Customer switching costs have a psychological as well as
+                economic logic.</strong
+              >
+              Better alone doesn’t mean people will use it. You’re competing
+              with another workflow plus any status quo bias, which can be
+              significant.
+            </p>
+
             <h2 id="advice-for-founders">Advice for Founders</h2>
             <p>
               This is the main section of the document. It contains the main
