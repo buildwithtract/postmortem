@@ -4,9 +4,11 @@
     "tailwindcss": "^4.1.0"
   },
   "scripts": {
-    "dev": "bun run ./src/index.html"
+    "dev": "bun run ./src/index.html",
+    "build": "bun run ./build.ts"
   },
   "devDependencies": {
+    "@types/bun": "^1.2.8",
     "bun-plugin-tailwind": "^0.0.15"
   }
 }
