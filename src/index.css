@@ -97,11 +97,11 @@ figure figcaption {
 }
 
 table {
-  @apply w-full border-collapse border border-textcolor;
+  @apply w-full border-collapse sm:border border-textcolor;
 }
 
 table tr {
-  @apply border-b border-textcolor;
+  @apply sm:border-b border-textcolor;
 }
 
 table tr:last-child {
@@ -114,7 +114,7 @@ table thead tr:last-child {
 
 table td,
 table th {
-  @apply p-2 text-sm border-r border-textcolor;
+  @apply sm:p-2 text-sm sm:border-r border-textcolor;
 }
 
 table th p,
@@ -123,7 +123,7 @@ table td p {
 }
 
 table th {
-  @apply font-title uppercase;
+  @apply font-title uppercase text-left sm:text-center;
 }
 
 table td:last-child,
@@ -134,4 +134,11 @@ table th:last-child {
 table td:first-child,
 table th:first-child {
   @apply border-l-0;
+}
+
+table.c43 tr td:nth-child(2),
+table.c43 tr th:nth-child(2),
+table.c43 tr td:nth-child(4),
+table.c43 tr th:nth-child(4) {
+  @apply hidden sm:table-cell;
 }
