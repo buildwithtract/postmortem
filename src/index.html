@@ -18,6 +18,19 @@
             window.history.pushState({}, "", target);
           });
         });
+
+        const $oai = document.getElementById("summarise-chatgpt");
+        const $claude = document.getElementById("summarise-claude");
+
+        const summarisePrompt =
+          "Summarise the following website in bullet points:\n\n" +
+          window.location;
+
+        $oai.href =
+          "https://chat.openai.com/?q=" + encodeURIComponent(summarisePrompt);
+
+        $claude.href =
+          "https://claude.ai/new?q=" + encodeURIComponent(summarisePrompt);
       });
     </script>
   </head>
@@ -124,6 +137,22 @@
               <a href="#advice-for-founders">Advice for Founders</a> section
               contains the main lessons we hope people take from our experience,
               so feel free to only read that and skip the rest.
+            </p>
+
+            <p>
+              You can also
+              <a
+                href="https://chat.openai.com/?q="
+                id="summarise-chatgpt"
+                target="_blank"
+                >summarise this page with ChatGPT</a
+              >, or
+              <a
+                href="https://claude.ai/chat?q="
+                id="summarise-claude"
+                target="_blank"
+                >summarise this page with Claude</a
+              >.
             </p>
 
             <h4>
