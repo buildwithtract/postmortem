@@ -6,3 +6,8 @@ await Bun.build({
   minify: true,
   plugins: [tailwindcss],
 });
+
+await Bun.write(
+  "./dist/opengraph-image.png",
+  Bun.file("./src/opengraph-image.png")
+);
