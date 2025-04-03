@@ -20,6 +20,7 @@
   --color-textcolor: #544c43;
   --color-primary: #8ea75f;
   --color-alt: #ffb097;
+  --color-em: #75cde0;
   --font-title: "Mallory", sans-serif;
   --font-body: "Martina Plantijn", serif;
   --font-flare: "Arizona Flare", serif;
@@ -69,15 +70,31 @@ ol li {
 }
 
 blockquote {
-  @apply border-l-4 border-alt pl-4 py-2 italic mb-4;
+  @apply border-l-4 border-alt sm:pl-4 py-2 italic mb-4;
 }
 
 blockquote.comment {
-  @apply border-r-4 border-alt pr-4 py-2 italic mb-4 mt-4 text-right border-l-0;
+  @apply py-2 italic mb-4 mt-4 border-l-0 flex flex-col sm:flex-row-reverse sm:gap-x-4 gap-y-2;
+}
+
+blockquote.comment div {
+  @apply flex-shrink-0 text-white uppercase font-bold sm:p-2 w-10 h-10 rounded-full flex items-center justify-center;
+}
+
+blockquote.comment div i {
+  @apply w-full text-center;
+}
+
+blockquote.comment.jamie div {
+  @apply bg-alt;
+}
+
+blockquote.comment.henry div {
+  @apply bg-em;
 }
 
 blockquote p {
-  @apply mb-2 text-sm;
+  @apply mb-2 text-sm sm:text-right;
 }
 
 blockquote p:last-child {
