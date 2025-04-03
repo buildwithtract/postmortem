@@ -70,7 +70,7 @@ ol li {
 }
 
 blockquote {
-  @apply border-l-4 border-alt sm:pl-4 py-2 italic mb-4;
+  @apply border-l-4 border-primary sm:pl-4 py-2 italic mb-4;
 }
 
 blockquote.comment {
@@ -94,7 +94,11 @@ blockquote.comment.henry div {
 }
 
 blockquote p {
-  @apply mb-2 text-sm sm:text-right;
+  @apply mb-2 text-sm;
+}
+
+blockquote.comment p {
+  @apply sm:text-right;
 }
 
 blockquote p:last-child {
